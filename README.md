@@ -6,7 +6,7 @@ This project creates a minimal blockchain in JavaScript.
 Every `Block` includes:
 - `index`: Chain position (e.g., 1 for genesis block).
 - `timeStamp`: Time of creation (e.g., '02/12/24').
-- `data`: Random payload (e.g., `{ amount: 4 }`).
+- `data`: Random payload.
 - `prevHash`: Hash of previous block.
 - `nonce`: Proof-of-work counter.
 - `hash`: SHA-256 hash of `index + timeStamp + prevHash + JSON.stringify(data) + nonce`.
