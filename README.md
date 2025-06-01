@@ -1,26 +1,26 @@
-## Minimal Blockchain Implementation
+# Minimum Blockchain Implementation
 
-This project implements a simple blockchain in JavaScript.
+This project creates a minimal blockchain in JavaScript.
 
 ## Block Structure
-Each `Block` contains:
-- `index`: Position in the chain (e.g., 1 for genesis block).
-- `timeStamp`: Creation time (e.g., '02/12/24').
-- `data`: Arbitrary payload (e.g., `{ amount: 4 }`).
-- `prevHash`: Hash of the previous block.
-- `nonce`: Counter for proof-of-work.
+Every `Block` includes:
+- `index`: Chain position (e.g., 1 for genesis block).
+- `timeStamp`: Time of creation (e.g., '02/12/24').
+- `data`: Random payload (e.g., `{ amount: 4 }`).
+- `prevHash`: Hash of previous block.
+- `nonce`: Proof-of-work counter.
 - `hash`: SHA-256 hash of `index + timeStamp + prevHash + JSON.stringify(data) + nonce`.
 
-The `calculateHash` method uses the `crypto-js` SHA256 library to compute the hash.
+The `calculateHash` function employs the `crypto-js` SHA256 library to calculate the hash.
 
 ## Validation Logic
-The `isChainValid` method:
-1. Checks if each block’s `prevHash` matches the previous block’s `hash`.
-2. Verifies each block’s `hash` equals its recalculated hash (`calculateHash`).
-Returns `true` if both checks pass, `false` if tampering is detected.
+The `isChainValid` function:
+1. Verifies that every block's `prevHash` is equal to the previous block's `hash`.
+2. Checks that every block's `hash` is the same as its recalculated hash (`calculateHash`).
+Returns `true` if both are successful, `false` otherwise if tampering is noticed.
 
 ## Proof-of-Work
-The `mineBlock(difficulty)` method increments `nonce` until the block’s hash starts with `difficulty` zeros (e.g. "00" for difficulty 2). This simulates computational work for block creation.
+The `mineBlock(difficulty)` function increments `nonce` until the block's hash begins with `difficulty` zeros (e.g. "00" for difficulty 2). This mimics computational effort for block generation.
 
 
 
