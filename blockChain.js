@@ -26,7 +26,7 @@ class Block {
 class BlockChain {
     constructor() {
         this.chain = [this.createGenesisBlock()]
-        this.difficulty = 2  // <-- make this smaller for faster testing
+        this.difficulty = 2  
     }
 
     createGenesisBlock() {
