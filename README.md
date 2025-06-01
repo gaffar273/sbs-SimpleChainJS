@@ -20,7 +20,7 @@ The `isChainValid` method:
 Returns `true` if both checks pass, `false` if tampering is detected.
 
 ## Proof-of-Work
-The `mineBlock(difficulty)` method increments `nonce` until the block’s hash starts with `difficulty` zeros (e.g., "00" for difficulty 2). This simulates computational work for block creation.
+The `mineBlock(difficulty)` method increments `nonce` until the block’s hash starts with `difficulty` zeros (e.g. "00" for difficulty 2). This simulates computational work for block creation.
 
 
 
