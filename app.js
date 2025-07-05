@@ -2,6 +2,7 @@ const { Block, BlockChain } = require('./blockChain')
 
 let agsChain = new BlockChain()
 
+
 console.log('Mining block 1...')
 agsChain.addBlock(new Block(2, '03/02/25', { amount: 4 }))
 
